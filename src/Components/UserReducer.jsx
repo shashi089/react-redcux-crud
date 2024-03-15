@@ -11,7 +11,7 @@ const userSlice= createSlice({
      },
      updateUser:(state, action)=>{
         const {id,name,email}= action.payload
-        const updateUser = state.find(user=> user.id==id)
+        const updateUser = state.find(user=> user.id=== +id)
         if(updateUser){
             updateUser.name=name;
             updateUser.email=email
@@ -19,9 +19,9 @@ const userSlice= createSlice({
        },
        deleteUser:(state, action)=>{
         const {id}= action.payload
-        const finduser = state.find(user=> user.id==id)
+        const finduser = state.find(user=> user.id=== +id)
         if(finduser){
-            return state.filter(element => element.id !=id)
+            return state.filter(element => element.id !== +id)
         }
     }
     } 

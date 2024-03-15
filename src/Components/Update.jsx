@@ -7,7 +7,7 @@ import "./Create.css"
 const Update = () => {
     const {id} = useParams()
     const users = useSelector(state=>state.users)
-    const existingUser= users.filter(element=> element.id ==id)
+    const existingUser= users.filter(element=> element.id === +id)
     const {name,email}= existingUser[0]
     const [uname, setName]=useState(name)
     const [uemail, setEmail]=useState(email)
