@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { addUser } from './UserReducer'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import "./Create.css"
 
 const Create = () => {
 
@@ -19,8 +20,8 @@ const Create = () => {
     }
 
   return (
-    <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
-        <div className='w-50 border bg-secondary text-white p-5'>
+    <div className='create-form d-flex w-100 vh-100 justify-content-center align-items-center'>
+        <div className='w-50 border container p-5'>
             <h3>Add New User</h3>
             <form action="" onSubmit={handleSubmit}>
                 <div>

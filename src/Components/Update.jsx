@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { updateUser } from './UserReducer'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import "./Create.css"
 
 const Update = () => {
     const {id} = useParams()
@@ -21,8 +22,8 @@ const Update = () => {
         navigate("/")
     }
   return (
-    <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
-        <div className='w-50 border bg-secondary text-white p-5'>
+    <div className='update-form d-flex w-100 vh-100 justify-content-center align-items-center'>
+        <div className='w-50 border container p-5'>
             <h3>Update User</h3>
             <form action="" onSubmit={handleUpdate}>
                 <div>

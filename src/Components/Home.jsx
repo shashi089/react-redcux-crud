@@ -12,10 +12,9 @@ const Home = () => {
     }
   return (
     <div className='container'>
-        <h2>CRUD Application</h2>
+        <h2 className='text-center'>CRUD Application</h2>
         <Link to="/create" className='btn btn-success my-3'>Create</Link>
-
-        <table className='table bordered'>
+        <table className='table table-bordered'>
             <thead>
                 <tr>
                     <th>ID</th>
